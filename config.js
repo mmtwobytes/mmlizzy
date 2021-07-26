@@ -15,7 +15,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './Xproject.db' : proces
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: '4.0 ADMIN',
+    VERSION: '4.5 ADMIN',
     CCRUN: "zeks",
     GG:"Error 101",
     CHANNEL: 'https://t.me/danumabots',
