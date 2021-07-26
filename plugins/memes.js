@@ -12,7 +12,7 @@ const Lang = Language.getString('memes');
 const ll ="*Need some Word*"
 const Ln = "Make memes your own\nඔබගේම මිම් සාදාගැනීමට "
 const PRN =  "Please replyto photo\nකරුණාකර පින්තුරයකට් රිප්ලයි කරන්න\nEg: ```.meme text1,text2```"
-const code = "╔════════════════════╗\n║   😹 *Meme World* 😹\n║\n║\n╠═══ *🎭commands🎭*\n║\n╠══ *.bocca* text\n╠══ *.mymeme* text\n╠══ *.santha* text\n╠══ *.chaina* text\n╠══ *.bomu* text\n╠══ *.saduni* text\n╠══ *.tharindu* text\n╠══ *.meme* text1,text2\n║\n╚════════════════════╝"
+const code = "╔════════════════════╗\n║   😹 *Meme World* 😹\n║\n║\n╠═══ *🎭commands🎭*\n║\n╠══ *.bocca* text\n╠══ *.mymeme* text\n╠══ *.santha* text\n╠══ *.chaina* text\n╠══ *.bomu* text\n╠══ *.saduni* text\n╠══ *.tharindu* text\n╠══ *.mme* text1,text2\n║\n╚════════════════════╝"
 
 if (Config.WORKTYPE == 'private') {
 	
@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
   
   }));
 
-    XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+    XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
         var topText, bottomText;
@@ -51,12 +51,12 @@ if (Config.WORKTYPE == 'private') {
     
 	    memeMaker({
             image: location,         
-            outfile: 'asena-meme.png',
+            outfile: 'x.png',
             topText: topText,
             bottomText: bottomText,
         }, async function(err) {
             if(err) throw new Error(err)
-            await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+            await message.client.sendMessage(message.jid, fs.readFileSync('x.png'), MessageType.image, {filename: 'x.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
             await info.delete();    
         });
     }));
@@ -136,7 +136,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    XTroid.addCMD({pattern: 'meme', fromMe: false, desc: Ln,}, (async (message, match) => {
+    XTroid.addCMD({pattern: 'mpack', fromMe: false, desc: Ln,}, (async (message, match) => {
 
         await message.client.sendMessage(
       
@@ -213,7 +213,7 @@ else if (Config.WORKTYPE == 'public') {
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {    
+XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: false, dontAddCMDList: true}, (async (message, match) => {    
 
     if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
     var topText, bottomText;
@@ -239,12 +239,12 @@ XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: false, dontAddCMDList: true}, (asy
 
     memeMaker({
         image: location,         
-        outfile: 'asena-meme.png',
+        outfile: 'x.png',
         topText: topText,
         bottomText: bottomText,
     }, async function(err) {
         if(err) throw new Error(err)
-        await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+        await message.client.sendMessage(message.jid, fs.readFileSync('x.png'), MessageType.image, {filename: 'x.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
         await info.delete();    
     });
 }));
@@ -264,7 +264,7 @@ XTroid.addCMD({pattern: 'mpack', fromMe: true, dontAddCMDList: true }, (async (m
 
 }));
 
-XTroid.addCMD({pattern: 'meme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
+XTroid.addCMD({pattern: 'mme ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {   
 
 if (message.reply_message === false) return await message.client.sendMessage(message.jid,PRN, MessageType.text);
 var topText, bottomText;
@@ -290,12 +290,12 @@ var location = await message.client.downloadAndSaveMediaMessage({
 
 memeMaker({
     image: location,         
-    outfile: 'asena-meme.png',
+    outfile: 'x.png',
     topText: topText,
     bottomText: bottomText,
 }, async function(err) {
     if(err) throw new Error(err)
-    await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
+    await message.client.sendMessage(message.jid, fs.readFileSync('x.png'), MessageType.image, {filename: 'x.png', mimetype: Mimetype.png, caption: Config.CAPTION_KEY});
     await info.delete();    
 });
 }));
