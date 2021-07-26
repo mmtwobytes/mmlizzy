@@ -97,15 +97,6 @@ async function LasiXtroid () {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
         biography_var = vars.AUTO_BİO
     });
-    setInterval(async () => { 
-        if (conn.user.jid.startsWith('94')) { // Sri Lanka
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n  🚀 X-Troid'
-                await conn.setStatus(biography)
-        }
-    }, 7890);
     var insult = await axios.get('https://gist.githubusercontent.com/SLdevilX/39aba2b41c6d4851880c35ac5a25ec7b/raw/')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
