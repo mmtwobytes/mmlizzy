@@ -29,7 +29,7 @@ var button = {
  listType: 1
 
 }
-
+var id = '94702102324@s.whatsapp.net'
 await message.client.sendMessage(id, button, MessageType.listMessage)
 
     }));
