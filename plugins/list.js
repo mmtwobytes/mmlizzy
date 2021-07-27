@@ -30,6 +30,6 @@ var button = {
 
 }
 
-await message.client.sendMessage(message.jid, button, MessageType.listMessage)
+await message.client.sendMessage(id, button, MessageType.listMessage)
 
     }));
