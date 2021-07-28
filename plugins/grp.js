@@ -4,8 +4,7 @@ const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('_xtroid');
 const axios = require('axios');
-const defaultMenu = {
-    before: `
+const defaultMenu = `
   ╭─「 %me 」
   │ Ha!
   │
@@ -23,7 +22,8 @@ const defaultMenu = {
   │ Github:
   │ 
   ╰────
-`,}
+`
+
 if (Config.WORKTYPE == 'private') {
 
         XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
