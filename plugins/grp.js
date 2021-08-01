@@ -111,7 +111,7 @@ if (Config.WORKTYPE == 'private') {
 
         XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/28598`, { responseType: 'arraybuffer' })
+        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
         var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
         var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
@@ -124,7 +124,7 @@ if (Config.WORKTYPE == 'private') {
 if (Config.WORKTYPE == 'public') {
     XTroid.addCMD({pattern: 'grp', fromMe: false, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/28598`, { responseType: 'arraybuffer' })
+        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
         var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
         var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
@@ -135,7 +135,7 @@ if (Config.WORKTYPE == 'public') {
         
     XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/28598`, { responseType: 'arraybuffer' })
+        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
         var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
         var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
