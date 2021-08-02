@@ -228,7 +228,6 @@ XTroid.addCMD({pattern: 'cgem ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
                       await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
                   });
               };
-
               await download(`${data}`, '/root/lizy/cgem.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cgem.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
               })
@@ -236,4 +235,57 @@ XTroid.addCMD({pattern: 'cgem ?(.*)', fromMe: wk, dontAddCMDList: true}, (async 
               console.log(err)
           } 
     });});
+}));
+
+XTroid.addCMD({pattern: 'cbery ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+
+   await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
+       const { lasi } = ann.data.def1
+       const lc = lasi
+       const seed = Config.LOCK
+       if (lc !== seed) return await message.sendMessage(GG);
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/create-berry-text-effect-online-free-1033.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/lizy/cbery.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/cbery.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });});
+}));
+
+
+XTroid.addCMD({pattern: 'ctrn ?(.*)', fromMe: wk, dontAddCMDList: true}, (async (message, match) => {
+
+   await axios.get(`https://tinyurl.com/${Config.LOCKR}`).then(async (ann) => {
+       const { lasi } = ann.data.def1
+       const lc = lasi
+       const seed = Config.LOCK
+       if (lc !== seed) return await message.sendMessage(GG);
+   if (match[1] === '') return await message.sendMessage(need);
+   LASIapi.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html",
+       `${match[1]}`
+       ).then(async (data) => { 
+         try { 
+             var download = async(uri, filename, callback) => {
+                 await request.head(uri, async(err, res, body) => {    
+                     await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                 });
+             };
+             await download(`${data}`, '/root/lizy/ctrn.jpg', async() => {                          
+                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/lizy/ctrn.jpg'), MessageType.image, { caption:  Config.CAPTION_KEY})
+             })
+         } catch(err) { 
+             console.log(err)
+         } 
+   });});
 }));
