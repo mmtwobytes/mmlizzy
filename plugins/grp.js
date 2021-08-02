@@ -105,28 +105,25 @@ chat.whatsapp.com/Gd4zEu4zXuUG1IgKIbBLRI
 chat.whatsapp.com/LSvMNWDgtcmJTzKRJ7gzkh
 
 `
+const lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
+const lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
+const lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
 
 if (Config.WORKTYPE == 'private') {
 
         XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
-        var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-        var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg3.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu3})
-    }));
+    
+      }));
 }
 
 if (Config.WORKTYPE == 'public') {
     XTroid.addCMD({pattern: 'grp', fromMe: false, deleteCommand: false,}, (async (message, match) => {
-
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
-        var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-        var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
@@ -134,10 +131,6 @@ if (Config.WORKTYPE == 'public') {
     }));
         
     XTroid.addCMD({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
-
-        var lasiimg = await axios.get(`https://netfiletolink.herokuapp.com/30084`, { responseType: 'arraybuffer' })
-        var lasiimg2 = await axios.get(`https://telegra.ph/file/145ee2d4fb11363f72582.jpg`, { responseType: 'arraybuffer' })
-        var lasiimg3 = await axios.get(`https://telegra.ph/file/427f410697252103d826d.jpg`, { responseType: 'arraybuffer' })
 
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg.data), MessageType.video, {mimetype: Mimetype.gif, caption: Menu1})
         await message.client.sendMessage(message.jid, Buffer.from(lasiimg2.data), MessageType.image, {mimetype: Mimetype.png, caption: Menu2})
