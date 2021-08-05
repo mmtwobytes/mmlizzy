@@ -4,7 +4,7 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 
 const Config = require('../config');
 
-XTroid.addCMD({pattern: 'lll', fromMe: true, deleteCommand: true,}, (async (message, match) => {
+XTroid.addCMD({pattern: '222', fromMe: FM, deleteCommand: false, desc: Ln,}, (async (message, match) => {
 
 var rows = [
 
