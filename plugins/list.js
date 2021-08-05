@@ -27,7 +27,7 @@ var button = {
  listType: 1
 
 }
-
+await message.client.sendMessage(message.jid, "hiiiiiiii", MessageType.text)
 await message.client.sendMessage(message.jid, button, MessageType.listMessage)
  
  
