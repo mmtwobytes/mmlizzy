@@ -27,7 +27,23 @@ var button = {
  listType: 1
 
 }
-var id = '94702102324@s.whatsapp.net'
+
 await message.client.sendMessage(message.jid, button, MessageType.listMessage)
+ 
+ 
+ 
+ const buttons = [
+  {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
+  {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1}
+]
+
+const buttonMessage = {
+    contentText: "Hi it's button message",
+    footerText: 'Hello World',
+    buttons: buttons,
+    headerType: 1
+}
+
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 
     }));
