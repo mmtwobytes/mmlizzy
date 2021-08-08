@@ -470,7 +470,7 @@ if (config.WORKTYPE == 'private') {
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
         ffmpeg(stream)
-            .audioBitrate(128)
+            .audioBitrate(320)
             .save('./' + title + '.mp3')
             .on('end', async () => {
                 const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
@@ -484,7 +484,7 @@ if (config.WORKTYPE == 'private') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data});
             });
     }));
     
@@ -504,7 +504,7 @@ if (config.WORKTYPE == 'private') {
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
         ffmpeg(stream)
-            .audioBitrate(128)
+            .audioBitrate(320)
             .save('./' + title + '.mp3')
             .on('end', async () => {
                 const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
@@ -518,7 +518,7 @@ if (config.WORKTYPE == 'private') {
                 writer.addTag();
   
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text, {quoted: message.data});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg'});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
             });
     }));
 
@@ -971,7 +971,7 @@ else if (config.WORKTYPE == 'public') {
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
         ffmpeg(stream)
-            .audioBitrate(128)
+            .audioBitrate(320)
             .save('./' + title + '.mp3')
             .on('end', async () => {
                 const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
@@ -985,7 +985,7 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data});
             });
     }));
     
@@ -1007,7 +1007,7 @@ else if (config.WORKTYPE == 'public') {
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
         ffmpeg(stream)
-            .audioBitrate(128)
+            .audioBitrate(320)
             .save('./' + title + '.mp3')
             .on('end', async () => {
                 const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
@@ -1021,7 +1021,7 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
   
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text, {quoted: message.data});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg'});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg',quoted: message.data});
             });
     }));
 
