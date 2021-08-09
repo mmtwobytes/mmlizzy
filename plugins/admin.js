@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
+const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = require('@adiwajshing/baileys');
 const XTroid = require('../events');
 const Config = require('../config');
 const GSU = "Group subject changed...🖌"
