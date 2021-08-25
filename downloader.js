@@ -8,7 +8,7 @@ const IG_DESC = "Downloads Image/Video From Instagram"
 const NEED_WORD = "Must Enter a link"
 const FBDESC = "Downloads Video From FaceBook"
 const LOADING = "Downloading the Video..."
-const NOT_FOUNDFB = "Video Not Found"
+const NOT_FOUNDFB = "Video Not Found ^ _ ^"
 const CAPTION = "Caption"
 
 XTroid.addCMD({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
