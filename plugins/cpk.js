@@ -2,7 +2,7 @@
 const XTroid = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const CPK = `
-─── ∙ 🍁↤THE CPACK↦🍁 ∙ ──
+─── ∙ 🍁↤MY CPACK↦🍁 ∙ ──
 ╔══════ ≪❈≫ ══════╗
 ║╠═*.cup*
 ║🍄 _.cup your text_
