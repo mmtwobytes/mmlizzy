@@ -122,28 +122,28 @@ async function LasiXtroid () {
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '🥏 ' + utch + '\n⌚ ' + ov_time + '\n\n  config.AB_NAME, 🚀 X-Troid'
+               const biography = '🥏 ' + utch + '\n⌚️ ' + ov_time + '\n\n  🚀 X-Troid\n\n'+'config.AB_NAME'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('994')) { // Azerbayjan
                 var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '🥏 ' + utch + '\n⌚ ' + ov_time + '\n\n MGx03 🚀 X-Troid'
+                const biography = '🥏 ' + utch + '\n⌚️ ' + ov_time + '\n\n  🚀 X-Troid\n\n'+'config.AB_NAME'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('94')) { // Sri Lanka
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '🥏 ' + utch + '\n⌚ ' + ov_time +'\n\n MGx03 🚀 X-Troid'
+                const biography = '🥏 ' + utch + '\n⌚️ ' + ov_time + '\n\n  🚀 X-Troid\n\n'+'config.AB_NAME'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('351')) { // Portugal
                 var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '🥏 ' + utch + '\n⌚ ' + ov_time + '\n\n MGx03 🚀 X-Troid'
+                const biography = '🥏 ' + utch + '\n⌚️ ' + ov_time + '\n\n  🚀 X-Troid\n\n'+'config.AB_NAME'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('75')) { // Russia
